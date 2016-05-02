@@ -14,6 +14,12 @@
                 }
             )
             .when(
+                '/character/detail/:id',
+                {
+                    template : '<detail></detail>'
+                }
+            )
+            .when(
                 '/contact',
                 {
                     template : `<h2>Contact</h2>`
