@@ -5,59 +5,43 @@
     var card = {
         controller : cardController,
         template : `
-  <div class="card">
-    <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="images/office.jpg">
-    </div>
-    <div class="card-content">
-      <span class="card-title activator grey-text text-darken-4">Card Title<i class="material-icons right">more_vert</i></span>
-      <p><a href="#">This is a link</a></p>
-    </div>
-    <div class="card-reveal">
-      <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-      <p>Here is some more information about this product that is only revealed once clicked on.</p>
-    </div>
-  </div>
+
+        <div class="row">
+
+            <input type="text" ng-model="search.name"></input>
+            <input type="text" ng-model="search.name"></input>
+
+            <div class="card col s4" ng-repeat="character in $ctrl.characters | filter : search">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="http://lorempixel.com/400/200/">
+                </div>
+                <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4">{{character.name}}<i class="material-icons right">more_vert</i></span>
+                    <p><a href="#">Perfil</a></p>
+                </div>
+                <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4">{{character.name}}<i class="material-icons right">close</i></span>
+                    <p>{{character.description}}</p>
+                </div>
+            </div>
+
+        </div>
     `
     };
 
-    function cardController(superheroSearch) {
+    function cardController($http) {
         var card = this;
 
-
-
-        //card.jsonvar = [
-            //{
-                //"title" : "Hola mundo",
-                //"slug" : "Este es un slug",
-                //"src" : "http://lorempixel.com/580/250/nature/1"
-            //},
-            //{
-                //"title" : "Hola mundo",
-                //"slug" : "Este es un slug",
-                //"src" : "http://lorempixel.com/580/250/nature/2"
-            //},
-            //{
-                //"title" : "Hola mundo",
-                //"slug" : "Este es un slug",
-                //"src" : "http://lorempixel.com/580/250/nature/3"
-            //},
-            //{
-                //"title" : "Hola mundo",
-                //"slug" : "Este es un slug",
-                //"src" : "http://lorempixel.com/580/250/nature/4"
-            //},
-            //{
-                //"title" : "Hola mundo",
-                //"slug" : "Este es un slug",
-                //"src" : "http://lorempixel.com/580/250/nature/5"
-            //},
-            //{
-                //"title" : "Hola mundo",
-                //"slug" : "Este es un slug",
-                //"src" : "http://lorempixel.com/580/250/nature/6"
-            //}
-        //];
+        $http
+            .get(
+                'http://gateway.marvel.com/v1/public/characters?apikey=30522f5854e4359b5b1e493608d5662b&ts=9&hash=0463135c2c739943d4f5f5f27dbd87f8'
+            )
+            .success(function (data) {
+                card.jsonvar = data.data
+                card.characters = data.data.results
+                console.log(data.data.results);
+            });
+            
     };
 
     angular
