@@ -2,16 +2,44 @@
 <html ng-app="tarea">
 <head>
     <title>Proyecto Tarea</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
+
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo">Superheroes</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="sass.html">Sass</a></li>
+                <li><a href="badges.html">Components</a></li>
+                <li><a href="collapsible.html">Javascript</a></li>
+                <li><a href="mobile.html">Mobile</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li><a href="sass.html">Sass</a></li>
+                <li><a href="badges.html">Components</a></li>
+                <li><a href="collapsible.html">Javascript</a></li>
+                <li><a href="mobile.html">Mobile</a></li>
+            </ul>
+        </div>
+    </nav>
 
 
     <div class="container" ng-view></div>
 
-
+    <!-- Librearias Externas -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular-route.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-resource.min.js"></script>z
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js"></script>
+
+    <!-- Propios -->
     <script type="text/javascript" src="app/app.js"></script>
     <script type="text/javascript" src="app/routes/routes.js"></script>
+    <script type="text/javascript" src="app/components/cards/cards_components.js"></script>
 </body>
 </html>

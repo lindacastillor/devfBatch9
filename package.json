@@ -1,0 +1,24 @@
+{
+  "name": "devf-tarea",
+  "version": "1.0.0",
+  "description": "Ejercicio de Tarea para podener en practica lo aprendido hasta el moento en el Devf",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lindacastillor/devfBatch9.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lindacastillor/devfBatch9/issues"
+  },
+  "homepage": "https://github.com/lindacastillor/devfBatch9#readme",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}

@@ -10,13 +10,13 @@
             .when(
                 '/',
                 {
-                    template : `<h1>Inicio</h1>`
+                    template : '<card></card>'
                 }
             )
             .when(
                 '/contact',
                 {
-                    template : `<h2>Contacto</h2>`
+                    template : `<h2>Contact</h2>`
                 }
             )
             .when(
