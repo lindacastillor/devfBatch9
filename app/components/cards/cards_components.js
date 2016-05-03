@@ -8,8 +8,7 @@
 
         <div class="row">
 
-            <input type="text" ng-model="search.name"></input>
-            <input type="text" ng-model="search.name"></input>
+            <input type="text" ng-model="search.name" placeholder="Buscar por nombre"></input>
 
             <div class="card col s4" ng-repeat="character in $ctrl.characters | filter : search">
                 <div class="card-image waves-effect waves-block waves-light">
@@ -39,7 +38,6 @@
             .success(function (data) {
                 card.jsonvar = data.data
                 card.characters = data.data.results
-                console.log(data.data.results);
             });
             
     };

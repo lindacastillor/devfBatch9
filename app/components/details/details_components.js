@@ -76,17 +76,16 @@
     `
     };
 
-    function detailController($http) {
+    function detailController($routeParams, $http) {
         var detail = this;
 
         $http
             .get(
-                'http://gateway.marvel.com/v1/public/characters/1011335?apikey=30522f5854e4359b5b1e493608d5662b&ts=9&hash=0463135c2c739943d4f5f5f27dbd87f8'
+                'http://gateway.marvel.com/v1/public/characters/'+$routeParams.id+'?apikey=30522f5854e4359b5b1e493608d5662b&ts=9&hash=0463135c2c739943d4f5f5f27dbd87f8'
             )
             .success(function (data) {
-                detail.jsonvar = data.data
-                detail.character = data.data.results[0]
-                console.log(data.data.results[0]);
+                detail.jsonvar = data.data;
+                detail.character = data.data.results[0];
             });
             
     };
@@ -95,8 +94,3 @@
         .module('tarea')
         .component('detail',detail);
 })();
-
-
-$(document).ready(function(){
-    $('ul.tabs').tabs();
-});
