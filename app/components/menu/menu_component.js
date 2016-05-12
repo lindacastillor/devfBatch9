@@ -31,7 +31,7 @@
     };
 
     angular
-        .module('tarea')
+        .module('marvel')
         .component('menu',menu);
 })();
 

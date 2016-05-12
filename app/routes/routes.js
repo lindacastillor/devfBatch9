@@ -2,7 +2,7 @@
     'use strict'
 
     angular
-        .module('tarea')
+        .module('marvel')
         .config(configuration);
 
     function configuration($routeProvider) {
@@ -10,7 +10,8 @@
             .when(
                 '/',
                 {
-                    template : '<card></card>'
+                    //template : '<card></card>'
+                    template : ''
                 }
             )
             .when(

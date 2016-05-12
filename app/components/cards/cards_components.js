@@ -36,13 +36,21 @@
                 'http://gateway.marvel.com/v1/public/characters?apikey=30522f5854e4359b5b1e493608d5662b&ts=9&hash=0463135c2c739943d4f5f5f27dbd87f8'
             )
             .success(function (data) {
-                card.jsonvar = data.data
-                card.characters = data.data.results
+                card.jsonvar = data.data;
+                card.characters = data.data.results;
+                init_cards();
             });
             
     };
 
+
+    function init_cards() {
+        $( document ).ready(function(){
+            $(".button-collapse").sideNav();
+        });
+    }
+
     angular
-        .module('tarea')
+        .module('marvel')
         .component('card',card);
 })();

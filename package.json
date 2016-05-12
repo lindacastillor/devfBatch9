@@ -1,7 +1,7 @@
 {
-  "name": "devf-tarea",
+  "name": "devf-marvel",
   "version": "1.0.0",
-  "description": "Ejercicio de Tarea para podener en practica lo aprendido hasta el moento en el Devf",
+  "description": "Ejercicio de marvel para podener en practica lo aprendido hasta el moento en el Devf",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

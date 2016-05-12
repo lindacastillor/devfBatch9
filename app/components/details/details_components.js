@@ -86,11 +86,18 @@
             .success(function (data) {
                 detail.jsonvar = data.data;
                 detail.character = data.data.results[0];
+                init_tab();
             });
             
     };
 
+    function init_tab() {
+        $(document).ready(function(){
+            $('ul.tabs').tabs();
+        });
+    }
+
     angular
-        .module('tarea')
+        .module('marvel')
         .component('detail',detail);
 })();

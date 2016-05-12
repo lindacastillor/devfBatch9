@@ -2,14 +2,7 @@
     'use strict'
 
     angular
-        .module('tarea', ['ngRoute']);
+        .module('marvel', ['ngRoute', 'ngResource']);
+    
 })();
 
-
-$( document ).ready(function(){
-    $(".button-collapse").sideNav();
-});
-
-$(document).ready(function(){
-    $('ul.tabs').tabs();
-});
